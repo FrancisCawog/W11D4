@@ -38,7 +38,7 @@ class Pokemon < ApplicationRecord
     validates :number, uniqueness: {message: "'%{value}' is already in use"}, numericality: {greater_than: 0}
     validates :attack, :defense, numericality: {greater_than_or_equal_to:0, less_than_or_equal_to: 100}
     validates :poke_type, inclusion: {in: TYPES, message: "'%{value}' is not a valid Pokemon type"}
-    validates :captured, inclusion: [true, false]
+    validates :captured, inclusion: {in: [true, false], message: "Captured must be true or false"} 
 
     has_many :items,
      dependent: :destroy
