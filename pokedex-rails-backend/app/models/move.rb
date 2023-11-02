@@ -8,4 +8,12 @@
 #  updated_at :datetime         not null
 #
 class Move < ApplicationRecord
+    validates :name, presence: {message: "'%{value}' is already in use"}
+
+    has_many :poke_moves,
+        dependent: :destroy
+
+    has_many :pokemon,
+        through: :poke_moves,
+        source: :pokemon
 end
