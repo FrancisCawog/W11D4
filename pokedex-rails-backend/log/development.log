@@ -8318,3 +8318,278 @@ FOREIGN KEY ("move_id")
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mPokeMove Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "poke_moves" WHERE "poke_moves"."move_id" = $1 AND "poke_moves"."pokemon_id" = $2 LIMIT $3[0m  [["move_id", 1], ["pokemon_id", 1], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for ::1 at 2023-11-02 15:35:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/balajiv/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/balajiv/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 527)
+Completed 200 OK in 630ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 963034)
+
+
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 15:35:26 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 6934)
+
+
+
+NoMethodError - undefined method `types' for Pokemon:Class:
+  app/controllers/api/pokemon_controller.rb:3:in `types'
+
+Started POST "/__better_errors/fff1d5afe73f1287/variables" for ::1 at 2023-11-02 15:35:26 -0400
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 15:35:37 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 5864)
+
+
+
+NoMethodError - undefined method `types' for Pokemon:Class:
+  app/controllers/api/pokemon_controller.rb:3:in `types'
+
+Started POST "/__better_errors/f3614134b7e7f833/variables" for ::1 at 2023-11-02 15:35:37 -0400
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 15:36:05 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 3997)
+
+
+
+NoMethodError - undefined method `types' for Pokemon:Class:
+  app/controllers/api/pokemon_controller.rb:3:in `types'
+
+Started POST "/__better_errors/cadbe5cf389f5a60/variables" for ::1 at 2023-11-02 15:36:05 -0400
+Started GET "/pokemon/types" for ::1 at 2023-11-02 15:36:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/pokemon/types"):
+  
+Started GET "/favicon.ico" for ::1 at 2023-11-02 15:36:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 15:37:01 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 5865)
+
+
+
+NoMethodError - undefined method `TYPES' for Pokemon:Class:
+  app/controllers/api/pokemon_controller.rb:3:in `types'
+
+Started POST "/__better_errors/0e9eb983350f33c8/variables" for ::1 at 2023-11-02 15:37:01 -0400
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 15:37:37 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2095)
+
+
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 15:37:49 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 2102)
+
+
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 15:39:14 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 143)
+
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 15:43:00 -0400
+Processing by Api::PokemonController#index as JSON
+  [1m[36mPokemon Load (9.6ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/api/pokemon_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 14.1ms | ActiveRecord: 20.8ms | Allocations: 24474)
+
+
+Started GET "/api/pokemon/2" for ::1 at 2023-11-02 15:43:21 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mPokemon Load (1.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+Completed 200 OK in 59ms (Views: 1.6ms | ActiveRecord: 6.6ms | Allocations: 3595)
+
+
+Started GET "/api/pokemon/128" for ::1 at 2023-11-02 15:43:25 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"128"}
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 2912)
+
+
+
+NoMethodError - undefined method `plain' for #<Api::PokemonController:0x0000000000d8e0>
+            render plain "Pokemon #{params[:id]} does not exist"
+                   ^^^^^:
+  app/controllers/api/pokemon_controller.rb:15:in `show'
+
+Started GET "/api/pokemon/128" for ::1 at 2023-11-02 15:43:34 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"128"}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 9)
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 3.2ms | Allocations: 4649)
+
+
+Started GET "/api/pokemon/128" for ::1 at 2023-11-02 15:44:09 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"128"}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 8)
+Completed 404 Not Found in 8ms (Views: 0.5ms | ActiveRecord: 3.3ms | Allocations: 4517)
+
+
+Started GET "/api/pokemon/128" for ::1 at 2023-11-02 15:44:48 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"128"}
+  [1m[36mPokemon Load (0.4ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.5ms | Allocations: 5278)
+
+
+
+NoMethodError - undefined method `errors' for nil:NilClass
+            render json: @pokemon.errors.full_messages, status: 404
+                                 ^^^^^^^:
+  app/controllers/api/pokemon_controller.rb:15:in `show'
+
+Started GET "/api/pokemon/128" for ::1 at 2023-11-02 15:44:50 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"128"}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1712)
+
+
+
+NoMethodError - undefined method `errors' for nil:NilClass
+            render json: @pokemon.errors.full_messages, status: 404
+                                 ^^^^^^^:
+  app/controllers/api/pokemon_controller.rb:15:in `show'
+
+Started GET "/api/pokemon/128" for ::1 at 2023-11-02 15:44:50 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"128"}
+  [1m[36mPokemon Load (0.2ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1711)
+
+
+
+NoMethodError - undefined method `errors' for nil:NilClass
+            render json: @pokemon.errors.full_messages, status: 404
+                                 ^^^^^^^:
+  app/controllers/api/pokemon_controller.rb:15:in `show'
+
+Started GET "/api/pokemon/128" for ::1 at 2023-11-02 15:45:01 -0400
+Processing by Api::PokemonController#show as JSON
+  Parameters: {"id"=>"128"}
+  [1m[36mPokemon Load (0.3ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" WHERE "pokemons"."id" = $1 LIMIT $2[0m  [["id", 128], ["LIMIT", 1]]
+  ↳ app/controllers/api/pokemon_controller.rb:11:in `show'
+Completed 404 Not Found in 8ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 4212)
+
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:06:52 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3802)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:07:37 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3021)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started GET "/api/pokemon/types" for ::1 at 2023-11-02 16:08:09 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2095)
+
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:08:16 -0400
+Processing by Api::PokemonController#index as JSON
+  [1m[36mPokemon Load (1.5ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons"[0m
+  ↳ app/controllers/api/pokemon_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 44.8ms | ActiveRecord: 20.4ms | Allocations: 21773)
+
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:08:24 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3020)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:09:54 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 788)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:10:53 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 769)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:11:29 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 769)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:17:13 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 769)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started GET "/api/pokemon" for ::1 at 2023-11-02 16:17:24 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 769)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
+Started POST "/__better_errors/3c859747bb63b673/variables" for ::1 at 2023-11-02 16:17:24 -0400
+  [1m[36mPokemon Load (0.9ms)[0m  [1m[34mSELECT "pokemons".* FROM "pokemons" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):73:in `block in render_template'
+Started GET "/api/pokemon/" for ::1 at 2023-11-02 16:18:16 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 769)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:8:in `index'
+
